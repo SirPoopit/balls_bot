@@ -79,4 +79,4 @@ async def top_balls(ctx, n: int = 3):
     # Send the message
     await ctx.send(response)
 
-bot.run('MTI2MDI0OTE0Njc2NjY1NTUwOQ.GEHbsE.8SxhrzQ4UyVspw06apYlCr2ls-voHsUbGdxNSU')
+bot.run('balls_bot_token')

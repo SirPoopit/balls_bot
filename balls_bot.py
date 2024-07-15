@@ -61,9 +61,6 @@ async def on_message(message):
         
     if 'dick' in message.content.lower() and not message.content.startswith('!'):
         await message.channel.send('dick')
-        
-        guild_id = message.guild.id
-        user_id = str(message.author.id)
     
     await bot.process_commands(message)
 

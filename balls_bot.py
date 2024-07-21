@@ -53,6 +53,16 @@ async def on_message(message):
     
     await bot.process_commands(message)
 
+# Event: When a message is received
+@bot.event
+async def on_message(message):
+    if message.author == bot.user:
+        return
+        
+    if 'dick' in message.content.lower() and not message.content.startswith('!'):
+        await message.channel.send('dick')
+    
+    await bot.process_commands(message)
 
 @bot.command(name='topballs', aliases=['top', 'ballers', 'topballers','baller'])
 async def top_balls(ctx, n: int = 3):

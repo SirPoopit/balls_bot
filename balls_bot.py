@@ -39,7 +39,10 @@ async def on_message(message):
         
     if 'balls' in message.content.lower() and not message.content.startswith('!'):
         await message.channel.send('balls hehe')
-        
+ 
+    if 'dick' in message.content.lower() and not message.content.startswith('!'):
+        await message.channel.send('dick')
+
         guild_id = message.guild.id
         user_id = str(message.author.id)
         
@@ -50,17 +53,6 @@ async def on_message(message):
         log_file_path = get_log_file_path(guild_id)
         with open(log_file_path, 'a') as f:
             f.write(f'{user_id}, {balls_counter[guild_id][user_id]}\n')
-    
-    await bot.process_commands(message)
-
-# Event: When a message is received
-@bot.event
-async def on_message(message):
-    if message.author == bot.user:
-        return
-        
-    if 'dick' in message.content.lower() and not message.content.startswith('!'):
-        await message.channel.send('dick')
     
     await bot.process_commands(message)
 

@@ -38,7 +38,7 @@ async def on_message(message):
         return
         
     if 'balls' in message.content.lower() and not message.content.startswith('!'):
-        await message.channel.send('balls')
+        await message.channel.send('balls hehe')
         
         guild_id = message.guild.id
         user_id = str(message.author.id)
@@ -89,4 +89,4 @@ async def top_balls(ctx, n: int = 3):
     # Send the message
     await ctx.send(response)
 
-bot.run('balls_bot_token')
+bot.run(os.getenv('balls_bot_token'))
